@@ -1,6 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Instagram from "./components/Instagram";
+
+export default function Home({ posts }) {
+  return (
+    <>
+      <div>Hello Instagram</div>
+      <Instagram posts={posts} />
+    </>
+  );
+}
+
 
 export async function getStaticProps() {
   const user_name = "sawa_officialgram"; //ビジネスorクリエイターアカウントの必要あり
@@ -18,25 +29,4 @@ export async function getStaticProps() {
       posts,
     },
   };
-}
-
-export default function Home({ posts }) {
-  return (
-    <>
-      <div>Hello Instagram</div>
-      <div>
-        {posts.business_discovery.media.data.map((data) => (
-          <Link href={data.permalink} alt={data.id} key={data.id}>
-            <Image
-              src={data.media_url}
-              width={360}
-              height={360}
-              alt="data"
-              objectFit="cover"
-            />
-          </Link>
-        ))}
-      </div>
-    </>
-  );
 }
