@@ -4,14 +4,14 @@ import Link from "next/link";
 import Instagram from "../components/Instagram";
 
 export default function Home({ posts }) {
+  const images = posts.business_discovery.media.data;
   return (
     <>
       <div>Hello Instagram</div>
-      <Instagram posts={posts} />
+      <Instagram posts={images} />
     </>
   );
 }
-
 
 export async function getStaticProps() {
   const user_name = "sawa_officialgram"; //ビジネスorクリエイターアカウントの必要あり
