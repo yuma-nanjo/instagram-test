@@ -9,7 +9,7 @@ function Instagram({ posts }) {
     return (
       <div>
         {posts.business_discovery.media.data.map((data) => (
-          <img src={data.media_url} alt="photo" key={data.id} />
+          <Image src={data.media_url} width={360} height={360} alt="photo" key={data.id} />
         ))}
       </div>
     );
