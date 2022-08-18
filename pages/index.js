@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import Instagram from "./components/Instagram";
+import Instagram from "../components/Instagram";
 
 export default function Home({ posts }) {
   return (
