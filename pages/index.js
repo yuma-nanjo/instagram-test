@@ -4,13 +4,10 @@ import Link from "next/link";
 import Instagram from "../components/Instagram";
 
 export default function Home({ posts }) {
-  const ima = posts.business_discovery;
-  const image = ima.media;
-  const images = image.data;
   return (
     <>
       <div>Hello Instagram</div>
-      <Instagram posts={images} />
+      <Instagram posts={posts} />
     </>
   );
 }
