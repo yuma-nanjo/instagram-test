@@ -3,7 +3,8 @@ import Image from "next/image";
 
 function Instagram({ posts }) {
   if (posts.business_discovery == undefined) {
-    return <div>違う</div>;
+    console.log(posts);
+    return <div>読み込み中</div>;
   } else {
     return (
       <div>
